@@ -1,6 +1,6 @@
 import React from "react";
 import "../../styles/tab.scss";
-import * as Images from "../../images";
+import * as Images from "../../assets";
 
 function Tab() {
   return (

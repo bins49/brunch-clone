@@ -16,5 +16,5 @@
     "noEmit": true,
     "jsx": "preserve"
   },
-  "include": ["src", "src/images/**/*"]
+  "include": ["src", "src/assets/**/*"]
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import "../../styles/banner.scss";
-import * as Images from "../../images";
+import * as Images from "../../assets";
 
 const Banner = () => {
   return (

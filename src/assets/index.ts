@@ -5,3 +5,4 @@ export { default as smallbanner } from "./smallbanner.png";
 export { default as smallbannertext } from "./smallbannertext.png";
 export { default as hamburger } from "./hamburger.png";
 export { default as search } from "./search.png";
+export { default as brunch } from "./brunch-icon.png";
