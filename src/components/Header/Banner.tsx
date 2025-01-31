@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/header.scss";
+import "../../styles/banner.scss";
 import * as Images from "../../images";
 
 const Banner = () => {

@@ -1,0 +1,58 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  padding: 0 50px 0 50px;
+
+  .Left-section {
+    display: flex;
+    align-items: center;
+    .Title {
+      font-size: 20px;
+      margin-left: 10px;
+      font-family: "Noto Sans DemiLight", "Malgun Gothic", sans-serif;
+      font-weight: 500;
+      .Story {
+        text-decoration-line: overline;
+        margin-left: 2px;
+      }
+    }
+    .Hamburger-button {
+      border: none;
+      background-color: transparent;
+      .Hamburger {
+        max-width: 30px;
+        max-height: 23px;
+        color: transparent;
+        border: none;
+      }
+    }
+  }
+
+  .Right-section {
+    display: flex;
+    align-items: center;
+
+    .Button {
+      width: 64px;
+      height: 28px;
+      background-color: transparent;
+      border: 1px solid #959595;
+      border-radius: 16px;
+      color: #666;
+      font-size: 12px;
+      text-decoration: none;
+      text-align: center;
+    }
+    .Search-button {
+      background-color: transparent;
+      border: none;
+      .Search {
+        width: 18px;
+        height: 18px;
+        margin: 0 0 2px 16px;
+      }
+    }
+  }
+}
