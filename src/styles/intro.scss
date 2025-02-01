@@ -1,4 +1,4 @@
-li {
+.li {
   list-style: none;
 }
 
@@ -17,7 +17,7 @@ a {
   display: block;
 }
 
-.Intro_brunch {
+.intro_brunch {
   width: 960px;
   margin: 0 auto;
 
@@ -26,7 +26,7 @@ a {
     margin: 44px 30px 0;
   }
 
-  .Tit-brunch {
+  .tit-brunch {
     margin-top: 0;
     color: #1a1a1a;
     font-family: Nanum Myeongjo, sans-serif;
@@ -40,13 +40,13 @@ a {
       margin: 150px auto 0;
     }
 
-    .Brunch-icon {
+    .brunch-icon {
       width: 45px;
       height: 45px;
     }
   }
 
-  .Desc-brunch {
+  .desc-brunch {
     padding-bottom: 16px;
     margin-top: -3px;
     color: #cacaca;
@@ -55,7 +55,7 @@ a {
     letter-spacing: -0.05em;
     line-height: 46px;
 
-    .Part {
+    .part {
       color: #cacaca;
       font-family: Nanum Myeongjo, sans-serif;
       letter-spacing: -0.05em;
@@ -63,23 +63,23 @@ a {
     }
   }
 
-  .Notice-wrap {
+  .notice-wrap {
     position: relative;
     overflow: hidden;
     height: 18px;
-    .Notice-item {
+    .notice-item {
       height: 18px;
     }
   }
 }
 
-.Info-notice {
+.info-notice {
   padding-left: 7px;
   font-size: 13px;
   color: #959595;
   float: right;
 }
-.Ico-notice {
+.ico-notice {
   padding-top: 2px;
   color: #00c6be;
   float: right;

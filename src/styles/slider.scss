@@ -1,0 +1,55 @@
+button {
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1.5;
+  outline: none;
+}
+
+.wrap-paging {
+  width: 960px;
+  margin: 22px auto 0;
+  text-align: center;
+  @for $i from 1 through 10 {
+    .text-page#{$i} {
+      background-position: #{(-20px * ($i - 1))} 0 !important;
+    }
+  }
+
+  .link-page {
+    display: inline-block;
+    height: 40px;
+    padding: 0 11px;
+    vertical-align: middle;
+  }
+  span {
+    .Img-page {
+      height: 12px;
+      margin-top: 8px;
+    }
+  }
+  .img-page {
+    display: block;
+    width: 15px;
+    height: 10px;
+    text-indent: -9999px;
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+      only screen and (min-device-pixel-ratio: 1.5),
+      only screen and (min-resolution: 1.5dppx) {
+      background: url(../assets/img-paging.png) no-repeat;
+      background-size: 191px 22px;
+    }
+  }
+}
+
+.screen-out {
+  position: absolute;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}

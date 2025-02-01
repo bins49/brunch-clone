@@ -1,0 +1,99 @@
+.animation-up-late {
+  animation: animation_up 0.5s;
+  transition: opacity 0.2s ease-out, transform 0.5s ease-out;
+
+  .screen-out {
+    position: absolute;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    text-indent: -9999px;
+  }
+
+  .keywords {
+    width: 100%;
+    height: auto;
+
+    .desc-brunch {
+      width: 960px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.keyword-list-wrap {
+  width: 100%;
+  overflow-x: auto;
+
+  .keyword-list {
+    position: relative;
+    width: 960px;
+    margin: 46px auto 0;
+  }
+}
+
+.keyword-item {
+  position: absolute;
+  z-index: 1;
+  width: 119px;
+  height: 119px;
+  border: 1px solid #eee;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+
+  &:hover {
+    border: 1px solid teal;
+  }
+
+  .keyword-item-txt {
+    position: relative;
+    top: 50%;
+    display: block;
+    transform: translateY(-50%);
+    color: gray;
+    font-family: "Noto Sans DemiLight", "Malgun Gothic", sans-serif;
+
+    &:hover {
+      color: teal;
+    }
+  }
+}
+
+.txt-brunch {
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+    only screen and (min-device-pixel-ratio: 1.5),
+    only screen and (min-resolution: 1.5dppx) {
+    background: url(https://t1.daumcdn.net/brunch9/static/images/pcrtn/txt_brunch_v6_221227.png)
+      no-repeat;
+    background-size: 380px 640px;
+  }
+
+  display: block;
+  overflow: hidden;
+  margin: 17px auto 0;
+  background: url(https://t1.daumcdn.net/brunch9/static/images/pcrtn/txt_brunch_v6_221227.png)
+    no-repeat;
+  text-indent: -9999px;
+}
+
+.ico-brunch {
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+    only screen and (min-device-pixel-ratio: 1.5),
+    only screen and (min-resolution: 1.5dppx) {
+    background: url(https://t1.daumcdn.net/brunch/static/img/help/pc/img_weekly.v2_rtn.png)
+      no-repeat;
+    background-size: 300px 170px;
+  }
+}
+
+.ico-brunch {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-position: -77px -80px;
+}

@@ -1,15 +1,27 @@
-.Image-container {
+html,
+body {
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.wrap-banner {
+  position: relative;
+  overflow: hidden;
+  transition: margin-top 1s ease-out;
+}
+
+.image-container {
   position: relative;
   width: 100%;
   height: 480px;
 
-  .Image {
+  .image {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
   }
-  .Image-text {
+  .image-text {
     width: 950px;
     height: 480px;
     position: absolute;
@@ -17,7 +29,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  .Close-button {
+  .close-button {
     width: 60px;
     position: absolute;
     top: 40%;
@@ -30,15 +42,15 @@
   }
 }
 
-.Small-image-container {
+.small-image-container {
   position: relative;
   width: 100%;
-  .Small-banner {
+  .small-banner {
     width: 100%;
     height: 60px;
     display: block;
   }
-  .Small-banner-text {
+  .small-banner-text {
     width: 960px;
     height: 60px;
     position: absolute;
