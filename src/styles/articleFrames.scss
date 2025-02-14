@@ -1,0 +1,134 @@
+.article-frames {
+  width: 960px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.frames-header {
+  margin-bottom: 20px;
+}
+
+.category-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.category-btn {
+  font-size: 14px;
+  color: #959595;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+
+  &.active {
+    color: #333;
+    font-weight: 500;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #333;
+    }
+  }
+
+  &:hover {
+    color: #333;
+  }
+}
+
+.frames-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.article-frame {
+  border: 1px solid #eee;
+  border-radius: 3px;
+  overflow: hidden;
+  background: #fff;
+  transition: transform 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.frame-image {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.frame-content {
+  padding: 20px;
+}
+
+.title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.frame-title {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #333;
+  margin: 0;
+}
+
+.frame-subtitle {
+  font-size: 14px;
+  color: #959595;
+  margin: 0 0 15px;
+  line-height: 1.4;
+}
+
+.frame-author {
+  font-size: 13px;
+  color: #959595;
+  margin: 0;
+}
+
+.new-badge {
+  width: 18px;
+  height: 18px;
+  background-color: #00c6be;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.view-more {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.view-more-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  color: #959595;
+  font-size: 14px;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #f8f8f8;
+  }
+}
