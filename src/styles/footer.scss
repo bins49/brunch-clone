@@ -1,0 +1,141 @@
+ul {
+  list-style: none;
+}
+
+.footer {
+  background-color: #202020;
+  color: #fff;
+  padding: 40px 0;
+}
+
+.footer-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+
+  .footer-left {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    min-height: 200px;
+  }
+}
+
+.footer-logo {
+  position: relative;
+
+  .ico-brunch-logo {
+    position: absolute;
+    left: 0%;
+    top: -40px;
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-position: -320px -112px;
+  }
+
+  .quote {
+    font-size: 16px;
+    color: #fff;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-style: italic;
+    line-height: 20px;
+  }
+
+  .author {
+    font-size: 11px;
+    color: #666;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-style: italic;
+    letter-spacing: 0.55px;
+    margin-top: 7px;
+  }
+}
+
+.ico-brunch {
+  overflow: hidden;
+  background: url(https://t1.daumcdn.net/brunch9/static/images/pc/ico_brunch_v9_230901.png)
+    no-repeat 0 0;
+  text-indent: -9999px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 60px;
+
+  .link-column {
+    h3 {
+      font-size: 14px;
+      color: #fff;
+      margin-bottom: 20px;
+      font-weight: normal;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 12px;
+        cursor: pointer;
+
+        &:hover {
+          color: #999;
+        }
+      }
+    }
+  }
+}
+
+.footer-bottom {
+  position: relative;
+  max-width: 960px;
+  margin: 40px auto 0;
+  padding: 20px;
+  border-top: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .copyright {
+    font-size: 11px;
+    color: #666;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-style: italic;
+  }
+
+  .app-links {
+    display: flex;
+    margin-right: 5px;
+    margin-left: auto;
+  }
+
+  .ico-android {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 26px;
+    right: 40px;
+    background-position: -260px -100px;
+  }
+
+  .ico-apple {
+    position: absolute;
+    width: 20px;
+    height: 25px;
+    top: 26px;
+    right: 1px;
+    background-position: -290px -100px;
+  }
+}
+
+.ico-brunch {
+  overflow: hidden;
+  background: url(//t1.daumcdn.net/brunch9/static/images/pc/ico_brunch_v9_230901.png)
+    no-repeat 0 0;
+  text-indent: -9999px;
+}
