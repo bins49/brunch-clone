@@ -47,12 +47,18 @@ li {
   justify-content: center;
   border-bottom: 1px solid #eee;
 
-  li:not(:last-child) {
+  li {
+    display: flex;
+    align-items: center;
     padding-right: 62px;
+
+    &:last-child {
+      padding-right: 0;
+    }
   }
 
   .link-tab {
-    color: #111;
+    color: #959595;
     position: relative;
     display: inline-block;
     padding: 0 14px 12px;
@@ -60,16 +66,24 @@ li {
     line-height: 22px;
     text-decoration: none;
 
-    ::after {
-      border-color: #00c6be;
-      position: absolute;
-      bottom: -1px;
-      left: 50%;
-      display: block;
-      width: 40px;
-      height: 1px;
-      content: "";
-      transform: translate(-50%);
+    &:hover {
+      color: #333;
+    }
+
+    &.active {
+      color: #333;
+      font-weight: 500;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 50%;
+        width: 40px;
+        height: 2px;
+        background-color: #00c6be;
+        transform: translateX(-50%);
+      }
     }
   }
 }
