@@ -4,6 +4,19 @@
   align-items: center;
   margin-top: 30px;
   padding: 0 50px 0 50px;
+  transition: all 0.3s ease;
+
+  &.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    margin-top: 0;
+    padding: 5px 30px;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
 
   .left-section {
     display: flex;
@@ -54,7 +67,7 @@
       .search {
         width: 18px;
         height: 18px;
-        margin: 0 0 2px 16px;
+        margin: 7.5px 0 2px 16px;
       }
     }
   }
