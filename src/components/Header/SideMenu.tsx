@@ -60,11 +60,21 @@ const SideMenu: FC<SideMenuProps> = ({ isOpen, onClose }) => {
         </div>
         <div className="side-menu-bottom">
           <div className="bottom-content">
-            <p>작가-지원</p>
-            <p className="bottom-text">프로젝트 보러가기</p>
-            <p className="bottom-question">계정을 잃어버리셨나요?</p>
+            <a href="https://brunch.co.kr/special/list">
+              <img
+                src="//i1.daumcdn.net/thumb/R336x0/?fname=http://t1.daumcdn.net/brunch/static/img/help/pc/top/side_banner_20221221.png"
+                className="side-banner"
+                alt="side-banner"
+              ></img>
+            </a>
           </div>
         </div>
+        <a
+          href="https://brunch.co.kr/signin/find_account"
+          className="find-user"
+        >
+          계정을 잃어버리셨나요?
+        </a>
       </div>
       <StartModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       {isOpen && <div className="overlay" onClick={onClose}></div>}
