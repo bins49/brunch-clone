@@ -1,0 +1,386 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1200;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 8px;
+  width: 1000px;
+  position: relative;
+  display: flex;
+}
+
+.modal-left {
+  width: 500px;
+  background: white;
+  border-radius: 8px 0 0 8px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-right {
+  width: 500px;
+  padding: 94px 47px 72px;
+  border-radius: 0 8px 8px 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f8f8;
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #959595;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  line-height: 1;
+  z-index: 2;
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slide-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  display: none;
+
+  &.active {
+    opacity: 1;
+    pointer-events: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.slide-link {
+  text-decoration: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 40px;
+
+  img {
+    width: 320px;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 40px;
+  }
+
+  .modal-subtitle {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 16px;
+    font-weight: normal;
+  }
+
+  .modal-description {
+    font-size: 15px;
+    color: #959595;
+    line-height: 1.6;
+    white-space: pre-line;
+  }
+}
+
+.slider-navigation {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  z-index: 2;
+}
+
+.slide-nav {
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  .arrow-left,
+  .arrow-right {
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #333;
+    border-right: 2px solid #333;
+    margin: 0;
+  }
+
+  .arrow-left {
+    transform: rotate(-135deg);
+  }
+
+  .arrow-right {
+    transform: rotate(45deg);
+  }
+}
+
+.slider-dots {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ddd;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &.active {
+    background: #00c6be;
+    transform: scale(1.2);
+  }
+
+  &:hover {
+    background: #00c6be;
+  }
+}
+
+.modal-header {
+  margin-bottom: 30px;
+
+  &::after {
+    content: "b";
+    position: absolute;
+    color: white;
+    font-size: 28px;
+    font-style: italic;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.modal-title {
+  font-size: 24px;
+  color: #333;
+  font-weight: normal;
+}
+
+.modal-body {
+  text-align: center;
+
+  .modal-subtitle {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 12px;
+    font-weight: normal;
+  }
+
+  .modal-description {
+    font-size: 14px;
+    color: #959595;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+
+  .kakao-login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #ffe500;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: 16px;
+
+    .ico-kakao {
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+    }
+
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+  }
+  .find-story-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #f8f8f8;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #959595;
+    cursor: pointer;
+    margin-bottom: 40px;
+
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
+
+  .help-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+
+    .help-link {
+      background: none;
+      border: none;
+      padding: 0;
+      font-size: 13px;
+      color: #959595;
+      cursor: pointer;
+      text-decoration: underline;
+
+      &:hover {
+        color: #666;
+      }
+    }
+  }
+}
+
+.login-section {
+  padding-bottom: 40px;
+  border-bottom: 1px solid #e7e7e7;
+
+  .modal-title {
+    font-size: 24px;
+    color: #333;
+    font-weight: normal;
+    margin-bottom: 30px;
+  }
+
+  .kakao-login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #ffe500;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    .ico-kakao {
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+    }
+
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+  }
+}
+
+.find-story-section {
+  padding: 40px 0;
+
+  .section-title {
+    font-size: 14px;
+    color: #333;
+    font-weight: normal;
+    margin-bottom: 16px;
+  }
+
+  .find-story-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .find-story-link {
+    display: block;
+    padding: 16px;
+    background-color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    font-size: 16px;
+
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
+
+  .help-link {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 12px;
+    color: #959595;
+    cursor: pointer;
+    text-decoration: underline;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+
+    &:hover {
+      color: #666;
+    }
+  }
+}
