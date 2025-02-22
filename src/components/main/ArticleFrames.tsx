@@ -34,30 +34,36 @@ function ArticleFrames({ activeDay }: ArticleFramesProps) {
       <div className="frames-header">
         <div className="category-buttons">
           <button
-            className={`category-btn ${
+            className={`category-btns ${
               activeCategory === "latest" ? "active" : ""
             }`}
             onClick={() => setActiveCategory("latest")}
           >
-            <span className="dot">•</span>
+            <span
+              className={`dot ${activeCategory === "latest" ? "active" : ""}`}
+            ></span>
             최신순
           </button>
           <button
-            className={`category-btn ${
+            className={`category-btns ${
               activeCategory === "support" ? "active" : ""
             }`}
             onClick={() => setActiveCategory("support")}
           >
-            <span className="dot">•</span>
+            <span
+              className={`dot ${activeCategory === "support" ? "active" : ""}`}
+            ></span>
             응원순
           </button>
           <button
-            className={`category-btn ${
+            className={`category-btns ${
               activeCategory === "likeit" ? "active" : ""
             }`}
             onClick={() => setActiveCategory("likeit")}
           >
-            <span className="dot">•</span>
+            <span
+              className={`dot ${activeCategory === "likeit" ? "active" : ""}`}
+            ></span>
             라이킷순
           </button>
         </div>
