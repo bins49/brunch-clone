@@ -1,7 +1,7 @@
 import React, { FC, useState } from "react";
 import "../../styles/startModal.scss";
 import "../../styles/startModalSlider.scss";
-import KakaoLogo from "../../assets/KakaoTalk_logo.svg";
+import KakaoLogo from "../../assets/KakaoTalk-logo.svg";
 
 interface StartModalProps {
   isOpen: boolean;
