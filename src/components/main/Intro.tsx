@@ -1,6 +1,6 @@
 import "../../styles/intro.scss";
 import React, { useState, useEffect } from "react";
-import * as Images from "../../assets";
+import * as Images from "../../types";
 
 // 메인 타이틀 및 슬라이더
 function Intro() {
