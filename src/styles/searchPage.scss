@@ -15,7 +15,7 @@
   position: relative;
 }
 
-.close-button {
+.search-close-button {
   position: absolute;
   top: 40px;
   right: 0;
@@ -23,7 +23,7 @@
   border: none;
   cursor: pointer;
   padding: 10px;
-  z-index: 2;
+  margin-right: 2px;
 
   .ico_close {
     font-size: 36px;
@@ -53,6 +53,28 @@
   position: relative;
   width: 100%;
   margin-bottom: 40px;
+
+  .search-button {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+
+    .search {
+      width: 18px;
+      height: 18px;
+      opacity: 0.3;
+      transition: opacity 0.2s ease;
+    }
+
+    &:hover .search {
+      opacity: 0.7;
+    }
+  }
 }
 
 .search-input {
@@ -60,11 +82,10 @@
   height: 80px;
   border: none;
   border-bottom: 2px solid #333;
-  font-size: 48px;
-  text-align: center;
+  font-size: 30px;
   outline: none;
-  padding: 0 20px;
   font-weight: 300;
+  font-family: "Noto Sans DemiLight", "Malgun Gothic", sans-serif;
 
   &::placeholder {
     color: #959595;
@@ -72,8 +93,7 @@
 }
 
 .search-tags {
-  margin-top: 60px;
-  font-size: 16px;
+  font-size: 28px;
   color: #959595;
   line-height: 1.5;
 
@@ -109,34 +129,65 @@
 
 .search-writers {
   margin-top: 60px;
-  text-align: left;
 
   .writers-title {
-    font-size: 12px;
-    color: #959595;
-    margin-bottom: 20px;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 24px;
   }
 
   .writers-list {
     display: flex;
-    gap: 20px;
+    justify-content: space-between;
     flex-wrap: wrap;
   }
 
-  .writer-profile {
+  .search-writer-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
     text-align: center;
+    text-decoration: none;
 
-    .profile-image {
-      width: 158px;
-      height: 158px;
+    .circle-frame {
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
-      margin-bottom: 10px;
+      border: 1px solid #eee;
+      margin-bottom: 16px;
+      transition: border-color 0.2s ease;
     }
 
-    .profile-name {
-      font-size: 14px;
-      color: #333;
-      margin: 0;
+    &:hover {
+      .circle-frame {
+        border-color: #333;
+      }
+      .writer-name {
+        color: #00c6be;
+      }
+    }
+
+    .writer-info {
+      .writer-name {
+        font-size: 14px;
+        color: #333;
+        margin: 0 0 8px 0;
+        font-weight: 500;
+        transition: color 0.2s ease;
+      }
+
+      .writer-description {
+        font-size: 12px;
+        color: #959595;
+        margin: 0;
+        line-height: 1.4;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
     }
   }
 }
@@ -173,6 +224,7 @@
       font-weight: 500;
       margin: 0;
       line-height: 24px;
+      margin-top: 5px;
 
       .story {
         text-decoration-line: overline;
@@ -181,7 +233,7 @@
     }
   }
 
-  .close-button {
+  .search-close-button {
     position: relative;
     top: auto;
     right: auto;
@@ -198,6 +250,7 @@
       color: #959595;
       font-weight: 300;
       line-height: 1;
+      padding-right: 11px;
     }
 
     &:hover .ico_close {

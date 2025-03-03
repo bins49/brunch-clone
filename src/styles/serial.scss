@@ -4,8 +4,11 @@ li {
 
 .animation-up-late {
   transition: opacity 0.2s ease-out 0s, transform 0.5s ease-out 0s;
-  width: 960x;
+  width: 960px;
   height: auto;
+  margin: 0 auto;
+  position: relative;
+  box-sizing: border-box;
 
   .tit-brunch {
     color: #000;
@@ -95,4 +98,10 @@ li {
   line-height: 0;
   overflow: hidden;
   text-indent: -9999px;
+}
+
+.serial-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
