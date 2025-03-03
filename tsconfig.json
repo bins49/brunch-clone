@@ -14,7 +14,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve"
+    "jsx": "react-jsx",
+    "types": ["react", "react-dom"]
   },
-  "include": ["src", "src/assets/**/*"]
+  "include": ["src"]
 }
