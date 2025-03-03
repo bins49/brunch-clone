@@ -1,0 +1,11 @@
+export { default as banner } from "../assets/banner.png";
+export { default as bannertext } from "../assets/bannertext.png";
+export { default as cancel } from "../assets/cancel.png";
+export { default as smallbanner } from "../assets/smallbanner.png";
+export { default as smallbannertext } from "../assets/smallbannertext.png";
+export { default as hamburger } from "../assets/hamburger.png";
+export { default as search } from "../assets/search.png";
+export { default as brunch } from "../assets/brunch-icon.png";
+export { default as paging } from "../assets/img-paging.png";
+export { default as leftArrow } from "../assets/left-arrow.png";
+export { default as rightArrow } from "../assets/right-arrow.png";
