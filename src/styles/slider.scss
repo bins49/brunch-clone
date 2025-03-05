@@ -259,12 +259,13 @@ button {
 }
 
 .pagination {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  position: static;
   display: flex;
+  justify-content: center;
   gap: 8px;
-  z-index: 2;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  width: 100%;
 }
 
 .page-number {
