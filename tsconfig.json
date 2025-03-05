@@ -13,9 +13,8 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
-    "types": ["react", "react-dom"]
+    "noEmit": false,
+    "jsx": "react-jsx"
   },
   "include": ["src"]
 }

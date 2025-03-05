@@ -1,20 +1,44 @@
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: "./src/index.tsx",
   output: {
-    // 최종 번들링된 자바스크립트
-    filename: "main.js",
-    // dist를 배포용 폴더로 사용
     path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js",
+    clean: true,
+    publicPath: "/",
+  },
+  mode: "production",
+  resolve: {
+    extensions: [".tsx", ".ts", ".js"],
+  },
+  devServer: {
+    historyApiFallback: true,
+    port: 3000,
+    hot: true,
+    open: true,
   },
   module: {
     rules: [
       {
-        test: /\.css?$/,
-        use: ["style-loader", "css-loader", "postcss-loader"],
-        exclude: ["/node_modules/"],
+        test: /\.(ts|tsx)$/,
+        exclude: /node_modules/,
+        use: "ts-loader",
+      },
+      {
+        test: /\.scss$/,
+        use: ["style-loader", "css-loader", "sass-loader"],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
       },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./public/index.html",
+    }),
+  ],
 };
